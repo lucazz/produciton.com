@@ -7,7 +7,7 @@ RSpec.feature 'Home screen', type: :feature do
   scenario 'displays checklists' do
     visit root_path
 
-    expect(page).to have_text('Ruby')
-    expect(page).to have_text('Elm')
+    expect(page).to have_checklist_link(ruby)
+    expect(page).to have_checklist_link(elm)
   end
 end
